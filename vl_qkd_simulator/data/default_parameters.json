@@ -1,0 +1,136 @@
+{
+  "room": {
+    "length_x": 5.0,
+    "width_y": 5.0,
+    "height_z": 3.0,
+    "tx_x": 0.5,
+    "tx_y": 1.0,
+    "tx_z": 2.8,
+    "rx_x": 4.5,
+    "rx_y": 4.0,
+    "rx_z": 2.8,
+    "tx_aim_at_rx": true,
+    "tx_normal": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "rx_aim_at_tx": true,
+    "rx_normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "wall_reflectivity": 0.7,
+    "ceiling_reflectivity": 0.8,
+    "floor_reflectivity": 0.3,
+    "override_distance": false,
+    "link_distance_m": 5.0
+  },
+  "source": {
+    "wavelength_nm": 520.0,
+    "mu": 0.5,
+    "pulse_rate_hz": 50000000.0,
+    "source_linewidth_nm": 0.02,
+    "source_model": "WCP (Poisson)",
+    "decoy_nu1": 0.1,
+    "decoy_nu2": 0.0
+  },
+  "channel": {
+    "channel_model": "Collimated Gaussian beam",
+    "tx_half_power_semiangle_deg": 15.0,
+    "lambertian_order_override": null,
+    "beam_waist_mm": 2.0,
+    "beam_divergence_mrad": 2.0,
+    "rx_aperture_area_cm2": 1.0,
+    "rx_fov_deg": 5.0,
+    "concentrator_index": 1.5,
+    "use_concentrator": false,
+    "optical_efficiency": 0.8,
+    "extra_loss_db": 0.0,
+    "enable_pointing_error": false,
+    "pointing_jitter_mrad": 0.5,
+    "enable_turbulence": false,
+    "turbulence_cn2": 1e-14
+  },
+  "filt": {
+    "center_nm": 520.0,
+    "bandwidth_nm": 0.1,
+    "peak_transmission": 0.9,
+    "shape": "Gaussian",
+    "out_of_band_rejection_db": 60.0
+  },
+  "background": {
+    "led": {
+      "enabled": true,
+      "n_luminaires": 4,
+      "optical_power_per_luminaire_w": 0.25,
+      "drive_by_illuminance": true,
+      "target_illuminance_lux": 10.0,
+      "semiangle_deg": 60.0,
+      "mount_height_m": 2.9,
+      "positions": [],
+      "include_reflections": true
+    },
+    "fluorescent": {
+      "enabled": false,
+      "n_luminaires": 2,
+      "optical_power_per_luminaire_w": 6.0,
+      "semiangle_deg": 60.0,
+      "mount_height_m": 2.9,
+      "positions": [],
+      "include_reflections": true
+    },
+    "sunlight": {
+      "enabled": false,
+      "outdoor_irradiance_w_m2": 500.0,
+      "window_area_m2": 2.0,
+      "window_transmission": 0.75,
+      "window_distance_m": 3.0,
+      "direct_sun_in_fov": false
+    },
+    "user": {
+      "enabled": false,
+      "mode": "Background count rate [counts/s]",
+      "value": 1000.0
+    },
+    "use_isotropic_preset": false,
+    "isotropic_preset": "Moderate indoor illumination",
+    "isotropic_spectral_irradiance_w_m2_nm": 0.00058
+  },
+  "detector": {
+    "efficiency": 0.6,
+    "dark_count_rate_hz": 100.0,
+    "dead_time_ns": 45.0,
+    "gate_width_ns": 0.2,
+    "afterpulse_probability": 0.01,
+    "timing_jitter_ps": 350.0,
+    "n_detectors_per_basis": 2,
+    "operation_mode": "Gated"
+  },
+  "polarization": {
+    "misalignment_angle_deg": 2.0,
+    "extinction_ratio_db": 25.0,
+    "depolarization": 0.005,
+    "intrinsic_error_override": null
+  },
+  "protocol": {
+    "protocol": "Decoy-state BB84",
+    "basis_bias_z": 0.5,
+    "use_efficient_bb84": false,
+    "error_correction_efficiency": 1.1,
+    "finite_key": false,
+    "block_size_bits": 10000000.0,
+    "epsilon_sec": 1e-10,
+    "epsilon_cor": 1e-15,
+    "external_qber_enabled": false,
+    "external_qber": 0.03
+  },
+  "monte_carlo": {
+    "n_pulses": 100000,
+    "seed": 12345,
+    "chunk_size": 500000,
+    "convergence_points": 25
+  },
+  "label": "DEMONSTRATION PARAMETERS - illustrative only, not experimentally validated"
+}
